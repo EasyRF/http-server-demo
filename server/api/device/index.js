@@ -6,6 +6,6 @@ var controller = require('./device.controller');
 var router = express.Router();
 
 router.get('/', controller.index);
-router.post('/:deviceId/series/:seriesId', controller.saveSeriesData);
+router.post('/:deviceId', controller.saveSeriesData);
 
 module.exports = router;

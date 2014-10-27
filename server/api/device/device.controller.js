@@ -10,7 +10,7 @@ function getOrCreateDevice(id) {
 	var device = _.find(devices, function(d) { return d.id === id});
 	if (!device) {
 		console.log("device " + id + " not found, creating new device");
-		device = { id: id, series: [] };
+		device = { id: id };
 		devices.push(device);
 	}
 	return device;
@@ -23,11 +23,11 @@ exports.index = function(req, res) {
 
 // Save series data for device
 exports.saveSeriesData = function(req, res) {
-  	console.log("received " + JSON.stringify(req.body) + " for series " + req.params.seriesId + " for device " + req.params.deviceId);
+  	console.log("received " + JSON.stringify(req.body) + " for device " + req.params.deviceId);
 
   	var device = getOrCreateDevice(req.params.deviceId);
 
-  	device.series[req.params.seriesId] = req.body;
+  	_.extend(device, req.body);
   	
   	res.send("saved");
 }
