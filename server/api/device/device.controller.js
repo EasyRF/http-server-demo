@@ -4,7 +4,7 @@ var _ = require('lodash');
 
 // The one and only list of devices
 var devices = [];
-
+var ledState = 0;
 
 function getOrCreateDevice(id) {
 	var device = _.find(devices, function(d) { return d.id === id});
@@ -28,6 +28,16 @@ exports.saveSeriesData = function(req, res) {
   	var device = getOrCreateDevice(req.params.deviceId);
 
   	_.extend(device, req.body);
-  	
-  	res.send("saved");
+
+  	res.send('ledState:' + ledState);
+}
+
+exports.saveLedState = function(req, res) {
+	console.log('led state: ' + JSON.stringify(req.body) + ' for device ' + req.params.deviceId);
+	if (req.body.ledState) {
+		ledState = 1;
+	} else {
+		ledState = 0;
+	}
+	res.send("led state saved");
 }

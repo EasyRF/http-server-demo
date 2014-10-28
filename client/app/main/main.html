@@ -11,26 +11,26 @@
   <div class="row">
     <div class="col-lg-6">
       <h1 class="page-header">Device Sensor Data</h1>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="device in devices">
-        <li>
-          <h2>Device {{device.id}}<h2>
-          <table class="table">            
-            <thead>
-              <tr>
-                <th class="col-md-4">Parameter</th><th>Value</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr ng-repeat="(key, value) in device">
-                <td>{{key}}</td><td>{{value}}</td>
-              </tr>  
-            </tbody>            
-          </table>
-        </li>
-      </ul>
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="col-md-4">Parameter</th><th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="(key, value) in device">
+            <td>{{key}}</td><td>{{value}}</td>
+          </tr>  
+        </tbody>            
+      </table>
     </div>
     <div class="col-lg-6 coloredRectangle"></div>    
   </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <button type="button" class="btn btn-default ledButton" ng-click="toggleLed()">Toggle LED</button>
+    </div>
+  </div>  
 </div>
 
 <footer class="footer">

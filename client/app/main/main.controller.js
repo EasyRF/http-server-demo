@@ -2,21 +2,29 @@
 
 angular.module('easyRfApp')
   .controller('MainCtrl', function ($scope, $http, $timeout) {
-    $scope.devices = [];
-
+    $scope.device = {};
 
     (function tick() {
 		$http.get('/api/devices').success(function(devices) {
-      		$scope.devices = devices;
-
       		if (devices.length == 1) {
-      			var colorCode = '#' + devices[0].red + devices[0].green + devices[0].blue;
+      			delete devices[0].id;
+      			$scope.device = devices[0];      			
+      			var colorCode = '#' + $scope.device.red + $scope.device.green + $scope.device.blue;
       			$(".coloredRectangle").css('background-color', colorCode);
       		}
 
       		$timeout(tick, 500);
     	});
     })();
+
+
+    $scope.toggleLed = function() {
+    	console.log("toggle LED");
+    	$scope.ledState = !$scope.ledState;
+    	$http.post('api/devices/1/led', {ledState: $scope.ledState}).success(function(response){
+    		console.log(response);
+    	});
+    }
 
     
   });
