@@ -14,7 +14,7 @@ angular.module('easyRfApp')
       			$(".coloredRectangle").css('background-color', colorCode);
       		}
 
-      		$timeout(tick, 1000);
+      		$timeout(tick, 500);
     	});
     })();
 
