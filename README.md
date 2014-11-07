@@ -7,7 +7,7 @@ To get the server up and running following the steps below.
 ### Install tools
 
 The server demo has been written using the latest and popular web development tools.
-It uses the NodeJS express framework for the back-end and angularJS and Bootstrap CSS for the front-end.
+It uses the NodeJS express framework for the back-end and AngularJS and Bootstrap CSS for the front-end.
 
 The project has been bootstrapped using [https://www.npmjs.org/package/generator-angular-fullstack]()
 
@@ -22,12 +22,12 @@ This tool should be used to install NodeJS packages. Like apt-get it also manage
 
 #### 2. Bower for the front-end
 
-Bower is a tool for managing Javascript libraries for the front-end code.
-It can be easily installing using NPM.
+Bower is a tool for managing Javascript libraries for the front-end.
+It can be easily installed using:
 
 `npm install bower -g`
 
-Using the `-g` option installs it as a global package instead of a project package.
+Using the `-g` option installs bower as a global package instead of a project package.
 
 ### Get the code
 
@@ -51,15 +51,15 @@ This can take a while depending on the speed of your internet connection and mac
 
 `npm install`
 
-When everything is downloaded you can run the demo using __Grunt__. Grunt is a very handy tool for developing web projects.
+When everything is downloaded you can run the demo using Grunt. Grunt is a very handy tool for developing web projects.
 Grunt is like a script tool and it automates tasks in a generic way. See [http://gruntjs.com/getting-started]() for more info.
 To run the server in development mode use:
 
 `grunt serve`
 
-In this mode you can edit Javascript, HTML and CSS files and after saving the changed files Grunt will reload the updates an reflect the changes immediately. It also opens a new browser window for you automatically.
+In this mode you can edit Javascript, HTML and CSS files and after saving Grunt will automatically reload the updated files and you will see the changes immediately. It also opens a new browser window for you automatically at startup.
 
-To run the server in without Grunt (and live reload) first build the project using:
+To run the server without Grunt (and without live reload) first build the project using:
 
 `grunt build`
 
@@ -74,6 +74,6 @@ To view the webpage go to:
 `localhost:9999`
 
 To see the Device Sensor Data when running sensors-test on one of your nodes make sure the server IP in sensors-test.c 
-matches the IP of you machine.
+matches the IP of your machine.
 
 
