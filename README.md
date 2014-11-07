@@ -9,7 +9,7 @@ To get the server up and running following the steps below.
 The server demo has been written using the latest and popular web development tools.
 It uses the NodeJS express framework for the back-end and AngularJS and Bootstrap CSS for the front-end.
 
-The project has been bootstrapped using [https://www.npmjs.org/package/generator-angular-fullstack]()
+The project has been bootstrapped using [https://www.npmjs.org/package/generator-angular-fullstack](https://www.npmjs.org/package/generator-angular-fullstack)
 
 #### 1. NodeJS for the back-end
 
@@ -52,7 +52,7 @@ This can take a while depending on the speed of your internet connection and mac
 `npm install`
 
 When everything is downloaded you can run the demo using Grunt. Grunt is a very handy tool for developing web projects.
-Grunt is like a script tool and it automates tasks in a generic way. See [http://gruntjs.com/getting-started]() for more info.
+Grunt is like a script tool and it automates tasks in a generic way. See [http://gruntjs.com/getting-started](http://gruntjs.com/getting-started) for more info.
 To run the server in development mode use:
 
 `grunt serve`
