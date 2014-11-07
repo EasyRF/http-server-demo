@@ -4,6 +4,10 @@
 
 To get the server up and running following the steps below.
 
+You can find the instruction for running the easyRF Contiki examples here:
+
+[https://github.com/EasyRF/contiki/](https://github.com/EasyRF/contiki/)
+
 ### Install tools
 
 The server demo has been written using the latest and popular web development tools.
