@@ -4,7 +4,7 @@ var _ = require('lodash');
 
 // The one and only list of devices
 var devices = [];
-var ledState = 0;
+var ledState = 1;
 
 function getOrCreateDevice(id) {
 	var device = _.find(devices, function(d) { return d.id === id});
