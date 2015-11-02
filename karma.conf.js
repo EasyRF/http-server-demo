@@ -47,6 +47,8 @@ module.exports = function(config) {
       stripPrefix: 'client/'
     },
 
+    
+
     // list of files / patterns to exclude
     exclude: [],
 
